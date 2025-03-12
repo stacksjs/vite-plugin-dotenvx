@@ -102,6 +102,7 @@ We would like to extend our thanks to the following sponsors for funding Stacks 
 
 ## Credits
 
+- [Mot](https://github.com/motdotla) for creating [dotenv](https://github.com/motdotla/dotenv) & [dotenvx](https://github.com/dotenvx/dotenvx)
 - [Chris Breuer](https://github.com/chrisbbreuer)
 - [All Contributors](https://github.com/stacksjs/vite-plugin-dotenvx/contributors)
 

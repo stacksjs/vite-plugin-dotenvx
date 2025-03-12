@@ -7,7 +7,7 @@ alwaysApply: false
 
 [![npm version][npm-version-src]][npm-version-href]
 [![GitHub Actions][github-actions-src]][github-actions-href]
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Commitizen friendly](mdc:https:/img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 <!-- [![npm downloads][npm-downloads-src]][npm-downloads-href] -->
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
@@ -58,7 +58,7 @@ export default defineConfig({
 
 ## Usage with dotenvx
 
-This plugin integrates with [dotenvx](https://github.com/dotenvx/dotenvx), a better dotenv from the creator of `dotenv`. It automatically decrypts encrypted .env files during development.
+This plugin integrates with [dotenvx](mdc:https:/github.com/dotenvx/dotenvx), a better dotenv from the creator of `dotenv`. It automatically decrypts encrypted .env files during development.
 
 ### Encrypting your .env files
 
@@ -82,7 +82,7 @@ This will encrypt your .env file and create a .env.keys file with the encryption
 
 The plugin will automatically decrypt your encrypted .env files during development. No additional configuration is needed.
 
-For more information on dotenvx, visit [dotenvx.com](https://dotenvx.com).
+For more information on dotenvx, visit [dotenvx.com](mdc:https:/dotenvx.com).
 
 ## Options
 
@@ -103,21 +103,21 @@ bun test
 
 ## Changelog
 
-Please see our [releases](https://github.com/stacksjs/vite-plugin-dotenvx/releases) page for more information on what has changed recently.
+Please see our [releases](mdc:https:/github.com/stacksjs/vite-plugin-dotenvx/releases) page for more information on what has changed recently.
 
 ## Contributing
 
-Please review the [Contributing Guide](https://github.com/stacksjs/contributing) for details.
+Please review the [Contributing Guide](mdc:https:/github.com/stacksjs/contributing) for details.
 
 ## Community
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Discussions on GitHub](https://github.com/stacksjs/stacks/discussions)
+[Discussions on GitHub](mdc:https:/github.com/stacksjs/stacks/discussions)
 
 For casual chit-chat with others using this package:
 
-[Join the Stacks Discord Server](https://discord.gg/stacksjs)
+[Join the Stacks Discord Server](mdc:https:/discord.gg/stacksjs)
 
 ## Postcardware
 
@@ -129,17 +129,18 @@ Our address: Stacks.js, 12665 Village Ln #2306, Playa Vista, CA 90094, United St
 
 We would like to extend our thanks to the following sponsors for funding Stacks development. If you are interested in becoming a sponsor, please reach out to us.
 
-- [JetBrains](https://www.jetbrains.com/)
-- [The Solana Foundation](https://solana.com/)
+- [JetBrains](mdc:https:/www.jetbrains.com)
+- [The Solana Foundation](mdc:https:/solana.com)
 
 ## Credits
 
-- [Chris Breuer](https://github.com/chrisbbreuer)
-- [All Contributors](https://github.com/stacksjs/vite-plugin-dotenvx/contributors)
+- [Mot](mdc:https:/github.com/motdotla) for creating [dotenv](mdc:https:/github.com/motdotla/dotenv) & [dotenvx](mdc:https:/github.com/dotenvx/dotenvx)
+- [Chris Breuer](mdc:https:/github.com/chrisbbreuer)
+- [All Contributors](mdc:https:/github.com/stacksjs/vite-plugin-dotenvx/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/stacks/tree/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE](mdc:https:/github.com/stacksjs/stacks/tree/main/LICENSE.md) for more information.
 
 Made with 💙
 
