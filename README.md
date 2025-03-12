@@ -91,18 +91,10 @@ This plugin integrates with [dotenvx](https://github.com/dotenvx/dotenvx), a bet
 
 ### Encrypting your .env files
 
-First, install dotenvx globally:
+Given you installed `vite-plugin-dotenvx`, you may run the following command to encrypt your .env files:
 
 ```bash
-npm install -g @dotenvx/dotenvx
-# or
-curl -sfS https://dotenvx.sh | sh
-```
-
-Then encrypt your .env files:
-
-```bash
-dotenvx encrypt
+bunx dotenvx encrypt
 ```
 
 This will encrypt your .env file and create a .env.keys file with the encryption keys.
@@ -167,7 +159,7 @@ For casual chit-chat with others using this package:
 
 ## Postcardware
 
-"Software that is free, but hopes for a postcard." We love receiving postcards from around the world showing where `vite-plugin-dotenvx` is being used! We showcase them on our website too.
+“Software that is free, but hopes for a postcard.” We love receiving postcards from around the world showing where `vite-plugin-dotenvx` is being used! We showcase them on our website too.
 
 Our address: Stacks.js, 12665 Village Ln #2306, Playa Vista, CA 90094, United States 🌎
 
