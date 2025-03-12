@@ -118,7 +118,7 @@ console.log('Custom Setting:', process.env.CUSTOM_SETTING) // From .env.local
 
 When using the Next.js convention, it's recommended to add the following to your `.gitignore` file:
 
-```
+```bash
 # .gitignore
 .env*.local
 .env.keys

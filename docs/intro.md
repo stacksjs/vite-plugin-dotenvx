@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/stacksjs/vite-plugin-dotenvx/blob/main/.github/art/cover.jpg?raw=true" alt="Social Card of this repo"></p>
+![Social Card of this repo](https://github.com/stacksjs/vite-plugin-dotenvx/blob/main/.github/art/cover.jpg?raw=true)
 
 # Introduction
 

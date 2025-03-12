@@ -60,7 +60,7 @@ dotenvx encrypt
 
 This will encrypt your .env file and create a `.env.keys` file with the encryption keys. The encrypted .env file will look something like this:
 
-```
+```bash
 #/-------------------[DOTENV_PUBLIC_KEY]--------------------/
 #/            public-key encryption for .env files          /
 #/       [how it works](https://dotenvx.com/encryption)     /

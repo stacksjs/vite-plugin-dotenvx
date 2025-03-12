@@ -68,7 +68,7 @@ This makes it easy for other developers to know which environment variables they
 
 When you run your Vite dev server with the `updateGitignore: true` option, the plugin will automatically add `.env.keys` to your `.gitignore` file if it's not already there:
 
-```
+```bash
 # .gitignore
 node_modules
 dist
