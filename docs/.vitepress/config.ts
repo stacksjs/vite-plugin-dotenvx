@@ -46,6 +46,16 @@ const sidebar = [
       { text: 'Usage', link: '/usage' },
     ],
   },
+  {
+    text: 'Examples',
+    items: [
+      { text: 'Basic Usage', link: '/examples/basic' },
+      { text: 'Multiple Environments', link: '/examples/multiple-environments' },
+      { text: 'Client-Side Variables', link: '/examples/client-side' },
+      { text: 'Next.js Convention', link: '/examples/nextjs-convention' },
+      { text: 'Auto-Generated Example', link: '/examples/auto-generated' },
+    ],
+  },
   { text: 'Showcase', link: '/Showcase' },
 ]
 
