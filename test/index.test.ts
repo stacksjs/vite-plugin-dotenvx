@@ -19,6 +19,32 @@ interface DotenvxOptions {
   strict?: boolean
 }
 
+// Define type for ConfigEnv
+interface ConfigEnv {
+  command: 'serve' | 'build'
+  mode: string
+}
+
+// Helper function to call configResolved hook safely
+function callConfigResolved(plugin: any, config: any = {}) {
+  if (plugin.configResolved && typeof plugin.configResolved === 'object' && 'handler' in plugin.configResolved) {
+    plugin.configResolved.handler(config)
+  }
+  else if (typeof plugin.configResolved === 'function') {
+    plugin.configResolved(config)
+  }
+}
+
+// Helper function to call config hook safely
+function callConfig(plugin: any, config: any = {}, env: ConfigEnv = { command: 'serve', mode: 'development' }) {
+  if (plugin.config && typeof plugin.config === 'object' && 'handler' in plugin.config) {
+    plugin.config.handler(config, env)
+  }
+  else if (typeof plugin.config === 'function') {
+    plugin.config(config, env)
+  }
+}
+
 // Mock dotenvx
 const mockDotenvx = {
   config: mock<(options?: DotenvxOptions) => DotenvxResult>(() => ({
@@ -115,8 +141,7 @@ describe('vite-plugin-dotenvx', () => {
     const plugin = VitePluginDotenvx({ verbose: true })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Expect console.log to be called with debug message
     expect(mockConsole.log.mock.calls.length).toBeGreaterThan(0)
@@ -126,8 +151,7 @@ describe('vite-plugin-dotenvx', () => {
     const plugin = VitePluginDotenvx({ enabled: false })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Expect console.log not to be called
     expect(mockConsole.log.mock.calls.length).toBe(0)
@@ -139,15 +163,13 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook to load env vars
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Create a mock config object
     const config: { define?: Record<string, string> } = {}
 
     // Call config hook
-    // @ts-expect-error - Calling hook directly
-    plugin.config(config)
+    callConfig(plugin, config)
 
     // Expect config.define to be set with the exposed env var
     expect(config.define).toBeDefined()
@@ -168,8 +190,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Expect writeFileSync to be called
     expect(mockFs.writeFileSync.mock.calls.length).toBe(1)
@@ -198,8 +219,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Expect writeFileSync to be called
     expect(mockFs.writeFileSync.mock.calls.length).toBe(1)
@@ -223,8 +243,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Expect writeFileSync not to be called
     expect(mockFs.writeFileSync.mock.calls.length).toBe(0)
@@ -250,8 +269,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // This should not throw
-    // @ts-expect-error - Calling hook directly
-    expect(() => plugin.configResolved({})).not.toThrow()
+    expect(() => callConfigResolved(plugin)).not.toThrow()
 
     // Expect error to be logged
     expect(mockConsole.error.mock.calls.length).toBe(1)
@@ -277,8 +295,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // This should throw
-    // @ts-expect-error - Calling hook directly
-    expect(() => plugin.configResolved({})).toThrow()
+    expect(() => callConfigResolved(plugin)).toThrow()
   })
 
   it('should handle fs errors gracefully when generating .env.example', () => {
@@ -292,8 +309,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // This should not throw
-    // @ts-expect-error - Calling hook directly
-    expect(() => plugin.configResolved({})).not.toThrow()
+    expect(() => callConfigResolved(plugin)).not.toThrow()
 
     // Expect error to be logged
     expect(mockConsole.error.mock.calls.length).toBe(1)
@@ -317,8 +333,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // This should not throw
-    // @ts-expect-error - Calling hook directly
-    expect(() => plugin.configResolved({})).not.toThrow()
+    expect(() => callConfigResolved(plugin)).not.toThrow()
 
     // Expect error to be logged
     expect(mockConsole.error.mock.calls.length).toBe(1)
@@ -337,8 +352,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Verify dotenvx.config was called with correct options
     expect(mockDotenvx.config.mock.calls.length).toBe(1)
@@ -356,8 +370,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Verify dotenvx.config was called with correct options
     expect(mockDotenvx.config.mock.calls.length).toBe(1)
@@ -375,8 +388,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Verify dotenvx.config was called with correct options
     expect(mockDotenvx.config.mock.calls.length).toBe(1)
@@ -394,8 +406,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Verify dotenvx.config was called with correct options
     expect(mockDotenvx.config.mock.calls.length).toBe(1)
@@ -413,8 +424,7 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Verify dotenvx.config was called with correct options
     expect(mockDotenvx.config.mock.calls.length).toBe(1)
@@ -432,17 +442,14 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook to load env vars
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Create a mock config object
     const config: { define?: Record<string, string> } = {}
 
     // Call config hook
-    // @ts-expect-error - Calling hook directly
-    plugin.config(config)
+    callConfig(plugin, config)
 
-    // Expect config.define to be undefined
     expect(config.define).toBeUndefined()
   })
 
@@ -457,15 +464,13 @@ describe('vite-plugin-dotenvx', () => {
     })
 
     // Call configResolved hook to load env vars
-    // @ts-expect-error - Calling hook directly
-    plugin.configResolved({})
+    callConfigResolved(plugin)
 
     // Create a mock config object
     const config: { define?: Record<string, string> } = {}
 
     // Call config hook
-    // @ts-expect-error - Calling hook directly
-    plugin.config(config)
+    callConfig(plugin, config)
 
     // Expect config.define to be undefined
     expect(config.define).toBeUndefined()
