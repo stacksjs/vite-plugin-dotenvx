@@ -200,11 +200,6 @@ export function VitePluginDotenvx(options: VitePluginDotenvxOptions): Plugin {
         debug(`Exposed ${Object.keys(envToExpose).length} environment variables to the client`)
       }
     },
-
-    // Add a closeBundle hook to ensure cleanup happens
-    async closeBundle() {
-      debug('Bundle closing...')
-    },
   }
 }
 

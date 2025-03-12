@@ -470,14 +470,4 @@ describe('vite-plugin-dotenvx', () => {
     // Expect config.define to be undefined
     expect(config.define).toBeUndefined()
   })
-
-  // Skip the closeBundle test for now as it's causing issues
-  it.skip('should call closeBundle hook without errors', () => {
-    const plugin = VitePluginDotenvx({
-      verbose: false,
-    })
-
-    // Just verify the hook exists
-    expect(typeof plugin.closeBundle).toBe('function')
-  })
 })
