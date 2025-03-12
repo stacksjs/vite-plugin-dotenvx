@@ -53,7 +53,7 @@ const sidebar = [
       { text: 'Multiple Environments', link: '/examples/multiple-environments' },
       { text: 'Client-Side Variables', link: '/examples/client-side' },
       { text: 'Next.js Convention', link: '/examples/nextjs-convention' },
-      { text: 'Auto-Generated Example', link: '/examples/auto-generated' },
+      { text: 'Auto-Generation', link: '/examples/auto-generation' },
     ],
   },
   { text: 'Showcase', link: '/Showcase' },
