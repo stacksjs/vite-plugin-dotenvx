@@ -52,21 +52,21 @@
     "preview:docs": "bun --bun vitepress preview docs"
   },
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.39.0"
+    "@dotenvx/dotenvx": "^1.39.1"
   },
   "devDependencies": {
-    "@stacksjs/docs": "^0.70.22",
+    "@stacksjs/docs": "^0.70.23",
     "@stacksjs/eslint-config": "^4.8.2-beta.1",
     "@stacksjs/rpx": "^0.10.0",
-    "@types/bun": "^1.2.8",
+    "@types/bun": "^1.2.9",
     "bumpp": "^10.1.0",
     "bun-plugin-dtsx": "^0.21.9",
     "changelogen": "^0.6.1",
     "lint-staged": "^15.5.0",
     "simple-git-hooks": "^2.12.1",
-    "typescript": "^5.8.2",
+    "typescript": "^5.8.3",
     "unocss": "^66.0.0",
-    "vite": "^6.2.4",
+    "vite": "^6.2.5",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vitepress": "^1.6.3"
   },
