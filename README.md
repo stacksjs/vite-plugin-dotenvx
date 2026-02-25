@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![GitHub Actions][github-actions-src]][github-actions-href]
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Commitizen friendly][commitizen-src]][commitizen-href]
 <!-- [![npm downloads][npm-downloads-src]][npm-downloads-href] -->
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
@@ -87,7 +87,7 @@ export default defineConfig({
 
 ## Usage with dotenvx
 
-This plugin integrates with [dotenvx](https://github.com/dotenvx/dotenvx), a better dotenv from the creator of `dotenv`. It automatically decrypts encrypted .env files during development.
+This plugin integrates with [dotenvx][dotenvx-gh-href], a better dotenv from the creator of `dotenv`. It automatically decrypts encrypted .env files during development.
 
 ### Encrypting your .env files
 
@@ -105,7 +105,7 @@ The plugin will automatically decrypt your encrypted .env files during developme
 
 ### VS Code Extension
 
-For the best development experience, we recommend installing the [dotenvx VS Code extension](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenvx-vscode). This extension provides syntax highlighting, encryption/decryption features, and other helpful tools directly in your editor.
+For the best development experience, we recommend installing the [dotenvx VS Code extension][dotenvx-vscode-href]. This extension provides syntax highlighting, encryption/decryption features, and other helpful tools directly in your editor.
 
 ```bash
 # Install from VS Code marketplace
@@ -114,7 +114,7 @@ code --install-extension dotenv.dotenvx-vscode
 
 Or search for "dotenvx" in the VS Code extensions marketplace.
 
-For more information on dotenvx, visit [dotenvx.com](https://dotenvx.com).
+For more information on dotenvx, visit [dotenvx.com][dotenvx-com-href].
 
 ## Options
 
@@ -122,7 +122,7 @@ For more information on dotenvx, visit [dotenvx.com](https://dotenvx.com).
 |--------|------|---------|-------------|
 | `enabled` | `boolean` | `true` | Enable or disable the plugin |
 | `verbose` | `boolean` | `false` | Enable verbose logging |
-| `path` | `string \| string[]` | `['.env']` | Path to .env file(s) |
+| `path` | `string or string[]` | `['.env']` | Path to .env file(s) |
 | `envKeysFile` | `string` | `'.env.keys'` | Path to .env.keys file |
 | `overload` | `boolean` | `false` | Override existing env variables |
 | `convention` | `string` | `undefined` | Load a .env convention (e.g., 'nextjs') |
@@ -141,21 +141,21 @@ bun test
 
 ## Changelog
 
-Please see our [releases](https://github.com/stacksjs/vite-plugin-dotenvx/releases) page for more information on what has changed recently.
+Please see our [releases][releases-href] page for more information on what has changed recently.
 
 ## Contributing
 
-Please review the [Contributing Guide](https://github.com/stacksjs/contributing) for details.
+Please review the [Contributing Guide][contributing-href] for details.
 
 ## Community
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[Discussions on GitHub](https://github.com/stacksjs/stacks/discussions)
+[Discussions on GitHub][discussions-href]
 
 For casual chit-chat with others using this package:
 
-[Join the Stacks Discord Server](https://discord.gg/stacksjs)
+[Join the Stacks Discord Server][discord-href]
 
 ## Postcardware
 
@@ -167,22 +167,39 @@ Our address: Stacks.js, 12665 Village Ln #2306, Playa Vista, CA 90094, United St
 
 We would like to extend our thanks to the following sponsors for funding Stacks development. If you are interested in becoming a sponsor, please reach out to us.
 
-- [JetBrains](https://www.jetbrains.com/)
-- [The Solana Foundation](https://solana.com/)
+- [JetBrains][jetbrains-href]
+- [The Solana Foundation][solana-href]
 
 ## Credits
 
-- [Mot](https://github.com/motdotla) for creating [dotenv](https://github.com/motdotla/dotenv) & [dotenvx](https://github.com/dotenvx/dotenvx)
-- [Chris Breuer](https://github.com/chrisbbreuer)
-- [All Contributors](https://github.com/stacksjs/vite-plugin-dotenvx/contributors)
+- [Mot][mot-href] for creating [dotenv][dotenv-href] & [dotenvx][dotenvx-gh-href]
+- [Chris Breuer][chris-href]
+- [All Contributors][contributors-href]
 
 ## License
 
-The MIT License (MIT). Please see [LICENSE](https://github.com/stacksjs/stacks/tree/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE][license-href] for more information.
 
 Made with 💙
 
+[dotenvx-vscode-href]: https://marketplace.visualstudio.com/items?itemName=dotenv.dotenvx-vscode
+[dotenvx-com-href]: https://dotenvx.com
+[releases-href]: https://github.com/stacksjs/vite-plugin-dotenvx/releases
+[contributing-href]: https://github.com/stacksjs/contributing
+[discussions-href]: https://github.com/stacksjs/stacks/discussions
+[discord-href]: https://discord.gg/stacksjs
+[jetbrains-href]: https://www.jetbrains.com/
+[solana-href]: https://solana.com/
+[mot-href]: https://github.com/motdotla
+[dotenv-href]: https://github.com/motdotla/dotenv
+[dotenvx-gh-href]: https://github.com/dotenvx/dotenvx
+[chris-href]: https://github.com/chrisbbreuer
+[contributors-href]: https://github.com/stacksjs/vite-plugin-dotenvx/contributors
+[license-href]: https://github.com/stacksjs/stacks/tree/main/LICENSE.md
+
 <!-- Badges -->
+[commitizen-src]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+[commitizen-href]: http://commitizen.github.io/cz-cli/
 [npm-version-src]: https://img.shields.io/npm/v/vite-plugin-dotenvx?style=flat-square
 [npm-version-href]: https://npmjs.com/package/vite-plugin-dotenvx
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/stacksjs/vite-plugin-dotenvx/ci.yml?style=flat-square&branch=main

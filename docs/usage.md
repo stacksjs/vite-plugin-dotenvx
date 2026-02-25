@@ -33,7 +33,7 @@ export default defineConfig({
 |--------|------|---------|-------------|
 | `enabled` | `boolean` | `true` | Enable or disable the plugin |
 | `verbose` | `boolean` | `false` | Enable verbose logging |
-| `path` | `string \| string[]` | `['.env']` | Path to .env file(s) |
+| `path` | `string or string[]` | `['.env']` | Path to .env file(s) |
 | `envKeysFile` | `string` | `'.env.keys'` | Path to .env.keys file |
 | `overload` | `boolean` | `false` | Override existing env variables |
 | `convention` | `string` | `undefined` | Load a .env convention (e.g., 'nextjs') |

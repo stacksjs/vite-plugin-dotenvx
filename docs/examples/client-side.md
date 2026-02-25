@@ -88,8 +88,8 @@ function toggleDarkMode() {
 1. **Never expose sensitive information** to the client. Variables exposed to the client will be included in your JavaScript bundle and visible to anyone who views your source code.
 
 2. **Use prefixes consistently** to make it clear which variables are exposed to the client:
-   - `VITE_` is the default prefix recognized by Vite
-   - `PUBLIC_` is another common convention
+  - `VITE_` is the default prefix recognized by Vite
+  - `PUBLIC_` is another common convention
 
 3. **Be careful with JSON values** in environment variables. Make sure they are properly formatted and escaped.
 
