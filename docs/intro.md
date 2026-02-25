@@ -18,7 +18,7 @@
 
 > A Vite plugin to seamlessly integrate with dotenvx for automatic decryption of .env files.
 
-## What is dotenvx?
+## What is dotenvx
 
 [dotenvx](https://dotenvx.com) is a better dotenv from the creator of the original `dotenv` package. It provides:
 
@@ -77,7 +77,7 @@ You can expose specific environment variables to the client-side code:
 
 ```ts
 Dotenvx({
-  exposeToClient: ['VITE_.*', 'PUBLIC_.*'],
+  exposeToClient: ['VITE_._', 'PUBLIC_._'],
   // ...other options
 })
 ```

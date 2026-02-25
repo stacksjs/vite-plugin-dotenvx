@@ -79,7 +79,7 @@ export default defineConfig({
       ignore: ['MISSING_ENV_FILE'], // Ignore specific errors
       generateExample: true, // Auto-generate .env.example file
       updateGitignore: true, // Auto-add .env.keys to .gitignore
-      exposeToClient: ['VITE_.*', 'PUBLIC_.*'], // Expose specific variables to client
+      exposeToClient: ['VITE_._', 'PUBLIC_._'], // Expose specific variables to client
     })
   ]
 })

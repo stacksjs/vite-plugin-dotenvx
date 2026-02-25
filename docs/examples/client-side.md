@@ -43,7 +43,7 @@ export default defineConfig({
     vue(),
     dotenvx({
       // Expose variables with these prefixes to the client
-      exposeToClient: ['VITE_.*', 'PUBLIC_.*'],
+      exposeToClient: ['VITE_._', 'PUBLIC_._'],
     }),
   ],
 })

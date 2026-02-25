@@ -29,5 +29,3 @@ features:
     icon: 🚀
     details: "Simple to set up with flexible configuration options to meet your needs."
 ---
-
-<Home />

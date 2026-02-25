@@ -21,7 +21,7 @@ export default defineConfig({
       ignore: ['MISSING_ENV_FILE'], // optional, ignore specific errors
       generateExample: false, // default: false, auto-generate .env.example file
       updateGitignore: false, // default: false, auto-add .env.keys to .gitignore
-      exposeToClient: ['VITE_.*', 'PUBLIC_.*'], // optional, expose specific environment variables to the client
+      exposeToClient: ['VITE_._', 'PUBLIC_._'], // optional, expose specific environment variables to the client
     })
   ]
 })
@@ -61,10 +61,10 @@ dotenvx encrypt
 This will encrypt your .env file and create a `.env.keys` file with the encryption keys. The encrypted .env file will look something like this:
 
 ```bash
-#/-------------------[DOTENV_PUBLIC_KEY]--------------------/
-#/            public-key encryption for .env files          /
-#/       [how it works](https://dotenvx.com/encryption)     /
-#/----------------------------------------------------------/
+# /-------------------[DOTENV_PUBLIC_KEY]--------------------/
+# /            public-key encryption for .env files          /
+# /       [how it works](https://dotenvx.com/encryption)     /
+# /----------------------------------------------------------/
 DOTENV_PUBLIC_KEY="03a1..."
 # .env
 API_KEY="encrypted:BDqDBibm4wsYqMpCjTQ6BsDHmMadg9K3dAt+Z9HPMfLEIRVz50hmLXPXRuDBXaJi..."
@@ -130,7 +130,7 @@ By default, environment variables are only available on the server. To expose sp
 
 ```ts
 Dotenvx({
-  exposeToClient: ['VITE_.*', 'PUBLIC_.*'],
+  exposeToClient: ['VITE_._', 'PUBLIC_._'],
   // ...other options
 })
 ```

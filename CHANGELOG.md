@@ -23,7 +23,6 @@
 
 ## ...main
 
-
 ### 🏡 Chore
 
 - Initial commit ([2be2b16](https://github.com/stacksjs/vite-plugin-dotenvx/commit/2be2b16))
@@ -33,4 +32,3 @@
 ### ❤️ Contributors
 
 - Chris ([@chrisbbreuer](https://github.com/chrisbbreuer))
-
