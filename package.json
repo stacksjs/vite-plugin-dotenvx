@@ -56,23 +56,23 @@
     "preview:docs": "bun --bun vitepress preview docs"
   },
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.39.1"
+    "@dotenvx/dotenvx": "^1.53.0"
   },
   "devDependencies": {
     "@stacksjs/docs": "^0.70.23",
-    "@stacksjs/rpx": "^0.10.0",
-    "@types/bun": "^1.2.9",
-    "bumpp": "^10.1.0",
-    "bun-plugin-dtsx": "^0.21.9",
-    "changelogen": "^0.6.1",
-    "lint-staged": "^15.5.0",
+    "@stacksjs/rpx": "^0.11.2",
+    "@types/bun": "^1.3.10",
+    "bumpp": "^10.4.1",
+    "bun-plugin-dtsx": "^0.21.17",
+    "changelogen": "^0.6.2",
+    "lint-staged": "^15.5.2",
     "pickier": "^0.1.20",
-    "simple-git-hooks": "^2.12.1",
-    "typescript": "^5.8.3",
-    "unocss": "^66.0.0",
-    "vite": "^6.2.5",
-    "vite-plugin-vue-devtools": "^7.7.2",
-    "vitepress": "^1.6.3"
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^5.9.3",
+    "unocss": "^66.6.6",
+    "vite": "^6.4.1",
+    "vite-plugin-vue-devtools": "^7.7.9",
+    "vitepress": "^1.6.4"
   },
   "overrides": {
     "unconfig": "0.3.10"
