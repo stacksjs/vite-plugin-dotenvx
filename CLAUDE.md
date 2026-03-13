@@ -2,7 +2,7 @@
 
 ## About
 
-A Vite plugin to seamlessly integrate with dotenvx.
+vite-plugin-dotenvx is a Vite plugin that integrates with dotenvx to automatically decrypt encrypted `.env` files during development and build. It supports multiple `.env` files, environment-specific configurations, variable expansion, command substitution, auto-generation of `.env.example` files, and selective client-side exposure of environment variables. Configuration options include strict mode, custom `.env.keys` path, Next.js-style conventions, and automatic `.gitignore` updates.
 
 ## Linting
 
