@@ -63,7 +63,7 @@
     "@stacksjs/rpx": "^0.10.0",
     "@types/bun": "^1.2.9",
     "bumpp": "^10.1.0",
-    "bun-plugin-dtsx": "^0.21.9",
+    "bun-plugin-dtsx": "0.9.9",
     "changelogen": "^0.6.1",
     "lint-staged": "^15.5.0",
     "pickier": "^0.1.20",
