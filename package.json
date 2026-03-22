@@ -59,7 +59,6 @@
     "@dotenvx/dotenvx": "^1.39.1"
   },
   "devDependencies": {
-    "@stacksjs/docs": "^0.70.23",
     "@stacksjs/rpx": "^0.10.0",
     "bumpp": "^10.1.0",
     "changelogen": "^0.6.1",
