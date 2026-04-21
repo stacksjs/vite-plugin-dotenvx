@@ -68,9 +68,6 @@
     "vitepress": "^1.6.3",
     "better-dx": "^0.2.7"
   },
-  "overrides": {
-    "unconfig": "0.3.10"
-  },
   "git-hooks": {
     "pre-commit": {
       "staged-lint": {
