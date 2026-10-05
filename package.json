@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@stacksjs/rpx": "^0.10.0",
-    "bumpp": "^10.1.0",
+    "bumpp": "^12.3.0",
     "changelogen": "^0.6.1",
     "typescript": "^5.8.3",
     "vite": "^6.2.5",
